@@ -28,7 +28,7 @@ local webhook = WebhookUtil.new({
     "https://discord.com/api/webhooks/your-webhook-id/your-webhook-token"
 })
 ```
-> Be sure to replace discord.com with the proxy of your choice.
+> Be sure to replace discord.com with the proxy of your choice.,
 
 ### Sending a Simple Message
 

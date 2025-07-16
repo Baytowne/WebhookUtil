@@ -2,22 +2,22 @@ local Embed = {}
 Embed.__index = Embed
 
 
-function Embed:SetTitle(title)
+function Embed:SetTitle(title: string)
     self.embedData.title = title
     return self
 end
 
-function Embed:SetDescription(description)
+function Embed:SetDescription(description: string)
     self.embedData.description = description
     return self
 end
 
-function Embed:SetColor(color)
+function Embed:SetColor(color: string)
     self.embedData.color = tonumber(color, 16)
     return self
 end
 
-function Embed:AddField(name, value, inline)
+function Embed:AddField(name: string, value: string, inline: boolean)
     table.insert(self.embedData.fields, {name = name, value = value, inline = inline})
     return self
 end
@@ -27,18 +27,18 @@ function Embed:SetTimestamp()
     return self
 end
 
-function Embed:SetThumbnail(url)
+function Embed:SetThumbnail(url: string)
     self.embedData.thumbnail = {url = url}
     return self
 end
 
-function Embed:SetFooter(text, iconUrl)
+function Embed:SetFooter(text: string, iconUrl: string)
     self.embedData.footer = {text = text, icon_url = iconUrl}
     return self
 end
 
-function Embed:Send()
-    self.WebhookUtil:Send({
+function Embed:Send(): boolean
+    return self.WebhookUtil:Send({
         embeds = {self.embedData}
     }, true)
 end
