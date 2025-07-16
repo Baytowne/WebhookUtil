@@ -4,6 +4,11 @@ WebhookUtil is a lightweight Luau library designed for sending messages and rich
 
 ## Installation
 
+> **⚠️ Note:**  
+> Roblox cannot communicate directly with Discord webhooks due to Discord blocking requests from Roblox servers.  
+> **You will need to use a proxy service**  such as (https://github.com/askfalse/roproxy-lite)
+
+
 To use WebhookUtil in your Roblox project:
 
 1. Copy the `init.luau` and `Embed.luau` files into your project's script directory.
