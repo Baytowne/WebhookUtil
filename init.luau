@@ -4,13 +4,11 @@ local HttpService = game:GetService("HttpService")
 local WebhookUtil = {}
 WebhookUtil.__index = WebhookUtil
 
-local Embed = require(script.Embed)
-
 function WebhookUtil:CreateEmbed()
-    return Embed.new(self)
+    return require(script.Embed).new(self)
 end
 
-function WebhookUtil:Send(data, custom: boolean?): boolean
+function WebhookUtil:Send(data, custom: boolean?)
     if not custom then
         if typeof(data) == "string" then
             data = {content = data}
