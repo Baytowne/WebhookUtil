@@ -7,7 +7,7 @@ WebhookUtil is a lightweight Luau library designed for sending messages and rich
 
 To use WebhookUtil in your Roblox project:
 
-1. Copy the `init.luau` and `Embed.luau` files into your project's script directory.
+1. Copy the `WebhookUtil.luau` and `Embed.luau` files into your project's script directory.
 2. Ensure the `Embed.luau` is a child of `WebhookUtil.lua` 
 2. Require and use the module in your script:
    ```luau
