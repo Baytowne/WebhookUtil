@@ -1,0 +1,11 @@
+[package]
+name = "baytowne/webhookutil"
+description = "A utility library for handling webhooks."
+license = "MIT"
+authors = ["Ethan"]
+version = "0.0.1"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = [".gitignore", "README.md", "LICENSE.txt", "selene.toml"]
+
+[dependencies]
